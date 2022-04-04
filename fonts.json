@@ -1,0 +1,66 @@
+{
+    "Serif": {
+        "Bold": {
+            "Capital": "𝐀",
+            "Small": "𝐚"
+        },
+        "Italic": {
+            "Capital": "𝐴",
+            "Small": "𝑎"
+        },
+        "Bold Italic": {
+            "Capital": "𝑨",
+            "Small": "𝒂"
+        }
+    },
+    "Sans-Serif": {
+        "Plain": {
+            "Capital": "𝖠",
+            "Small": "𝖺"
+        },
+        "Bold": {
+            "Capital": "𝗔",
+            "Small": "𝗮"
+        },
+        "Italic": {
+            "Capital": "𝘈",
+            "Small": "𝘢"
+        },
+        "Bold Italic": {
+            "Capital": "𝘼",
+            "Small": "𝙖"
+        }
+    },
+    "Double-Struck": {
+        "Plain": {
+            "Capital": "𝔸",
+            "Small": "𝕒"
+        }
+    },
+    "Monospace": {
+        "Plain": {
+            "Capital": "𝙰",
+            "Small": "𝚊"
+        }
+    },
+    "Script": {
+        "Plain": {
+            "Capital": "𝒜",
+            "Small": "𝒶"
+        },
+        "Bold": {
+            "Capital": "𝓐",
+            "Small": "𝓪"
+        }
+    },
+    "Fraktur": {
+        "Plain": {
+            "Capital": "𝔄",
+            "Small": "𝔞"
+        },
+        "Bold": {
+            "Capital": "𝕬",
+            "Small": "𝖆"
+        }
+    }
+}
