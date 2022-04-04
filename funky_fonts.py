@@ -3,7 +3,7 @@ import json
 import argparse
 
 # HELPER FUNCTIONS - load the necessary data
-def initialize_character_dictionary():
+def load_character_dictionary():
     with open('fonts.json', 'r') as character_file:
         characters = json.load(character_file)
         return characters
@@ -19,8 +19,9 @@ def calculate_offsets(initial_characters):
     return offsets
 
 # GLOBAL VARIABLES
-INITIAL_CHARACTERS = initialize_character_dictionary()
-OFFSET_LOOKUP = calculate_offsets(INITIAL_CHARACTERS)
+OFFSET_LOOKUP = calculate_offsets(
+    load_character_dictionary()
+)
 
 # FUNCTIONS
 def is_capital(ordinal):
@@ -54,7 +55,7 @@ def main():
     convert.add_argument(
         'font',
         metavar='font',
-        choices=INITIAL_CHARACTERS.keys(),
+        choices=OFFSET_LOOKUP.keys(),
         help='the font'
     )
     convert.add_argument(
@@ -75,7 +76,7 @@ def main():
     )
     show.add_argument(
         '--list-styles',
-        choices=INITIAL_CHARACTERS.keys(),
+        choices=OFFSET_LOOKUP.keys(),
         help='lists available styles for the specified font'
     )
     show.add_argument(
@@ -87,12 +88,12 @@ def main():
 
     if (args.list_fonts):
         print('The fonts available are:')
-        for font in INITIAL_CHARACTERS.keys():
+        for font in OFFSET_LOOKUP.keys():
             print(f'\t{font}')
     
     if (font := args.list_styles):
         print(f'The styles available for {font} are:')
-        for style in INITIAL_CHARACTERS[font]:
+        for style in OFFSET_LOOKUP[font]:
             print(f'\t{style}')
     
     if (args.command == 'convert'):
