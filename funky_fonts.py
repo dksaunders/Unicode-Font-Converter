@@ -53,11 +53,13 @@ def main():
     convert = operation.add_parser('convert')
     convert.add_argument(
         'font',
+        metavar='font',
         choices=INITIAL_CHARACTERS.keys(),
         help='the font'
     )
     convert.add_argument(
         'style',
+        metavar='style',
         choices=['Plain', 'Bold', 'Italic', 'Bold Italic'],
         help='whether the font should be bold and/or italicized'
     )
